@@ -50,7 +50,12 @@ end;
 
 function DaysInYear(year: integer): integer := IsLeapYear(year) ? 366 : 365;
 
-function DaysInYearRange(year1, year2: integer): integer := 0;
+function DaysInYearRange(year1, year2: integer): integer;
+begin
+  Result:=0;
+  for var i:=year1 to year2 do 
+    Result+=DaysInYear(i);
+end;
 
 function SecondsInHours(hours: integer): integer := 0;
 

@@ -8,6 +8,7 @@ begin
   assert(IsLeapYear(1812), 'TestIsLeapYear fails on 1812');
   assert(not(IsLeapYear(2003)), 'TestIsLeapYear fails on 2003');
   assert(not(IsLeapYear(1999)), 'TestIsLeapYear fails on 1999');
+  Writeln('TestIsLeapYear was succestful');
 end;
 
 procedure TestDaysInMonth();
@@ -16,6 +17,7 @@ begin
   assert(DaysInMonth(2, 2004) = 29, 'TestDaysInMonth fails on February 2004');
   assert(DaysInMonth(4, 2019) = 30, 'TestDaysInMonth fails on February 2004');
   assert(DaysInMonth(5, 1967) = 31, 'TestDaysInMonth fails on February 2004');
+  Writeln('TestDaysInMonth was succestful');
 end;
 
 procedure TestLaterInDay();
@@ -28,6 +30,7 @@ begin
   assert(LaterInDay(p2, p1) = p2, 'TestLaterInDay fails on 14:12:10 and 15:12:10');
   assert(LaterInDay(p1, p3) = p3, 'TestLaterInDay fails on 14:12:10 and 14:20:10');
   assert(LaterInDay(p4, p1) = p4, 'TestLaterInDay fails on 14:12:10 and 14:12:44');
+  Writeln('TestLaterInDay was succestful');
 end;
 
 procedure TestrLaterInYear();
@@ -39,6 +42,7 @@ begin
   assert(LaterInYear(p2, p1) = p1, 'TestLaterInYear fails on 21.11 and 11.7');
   assert(LaterInYear(p2, p3) = p2, 'TestLaterInYear fails on 20.2 and 11.7');
   assert(LaterInYear(p3, p1) = p1, 'TestLaterInYear fails on 21.11 and 20.2');
+  Writeln('TestrLaterInYear was succestful');
 end;
 
 procedure TestDaysInYear();
@@ -47,6 +51,7 @@ begin
   assert(DaysInYear(2001) = 365, 'TestDaysInYear fails on 2001');
   assert(DaysInYear(1600) = 366, 'TestDaysInYear fails on 1600');
   assert(DaysInYear(1900) = 365, 'TestDaysInYear fails on 1900');
+  Writeln('TestDaysInYear was succestful');
 end;
 
 procedure TestDaysInYearRange();
@@ -55,6 +60,7 @@ begin
   assert(DaysInYearRange(2000, 2004) = 1827, 'TestDaysInYear fails on 2000..2004');
   assert(DaysInYearRange(1999, 2001) = 1096, 'TestDaysInYear fails on 1999..2001');
   assert(DaysInYearRange(2050, 2100) = 18627, 'TestDaysInYear fails on 2050..2100');
+  Writeln('TestDaysInYearRange was succestful');
 end;
 
 procedure TestSecondsInHours();

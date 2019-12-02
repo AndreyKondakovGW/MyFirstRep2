@@ -6,4 +6,5 @@ begin
   TestLaterInDay();
   TestrLaterInYear();
   TestDaysInYear();
+  TestDaysInYearRange();
 end.
