@@ -1,6 +1,6 @@
 ﻿unit DateTimeMethods;
 
-function IsLeapYear(year: integer): boolean := year mod 4 = 0;
+function IsLeapYear(year: integer): boolean := ((year mod 4 = 0) and not(year mod 100 = 0)) or (year mod 400 = 0);
 
 function DaysInMonth(month, year: integer): integer;
 begin
@@ -42,7 +42,10 @@ end;
 
 function LaterInYear(p1, p2: DateTime): Datetime;
 begin
-  result := max(p1, p2);
+  if (max(p1.DayOfYear, p2.DayOfYear) = p1.DayOfYear) then
+    result := p1;
+  if (max(p1.DayOfYear, p2.DayOfYear) = p2.DayOfYear) then
+    result := p2;
 end;
 
 function DaysInYear(year: integer): integer := 0;
