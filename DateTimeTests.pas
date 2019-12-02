@@ -63,14 +63,6 @@ begin
   Writeln('TestDaysInYearRange was succestful');
 end;
 
-procedure TestSecondsInHours();
-begin
-  assert(SecondsInHours(1) = 60 * 60, 'TestSecondsInHours fails on 1');
-  assert(SecondsInHours(2) = 2 * 60 * 60, 'TestSecondsInHours fails on 2');
-  assert(SecondsInHours(0) = 0, 'TestSecondsInHours fails on 0');
-  Writeln('TestSecondsInHours was succestful');
-end;
-
 begin
 	//Here be test-calls
 end.
