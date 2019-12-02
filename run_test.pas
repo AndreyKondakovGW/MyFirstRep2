@@ -2,5 +2,8 @@
 
 begin
   TestIsLeapYear();
-  TestDaysInMonth
+  TestDaysInMonth();
+  TestLaterInDay();
+  TestrLaterInYear();
+  TestDaysInYear();
 end.
